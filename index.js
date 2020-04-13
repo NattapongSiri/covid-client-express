@@ -5,7 +5,7 @@ let app = Express()
 const basePath = path.join(__dirname, "public")
 const PORT = process.env.PORT
 
-app.use(basePath)
+app.use(Express.static(basePath))
 app.get("/ping", (_req, res) => {
     res.send("pong")
 })
